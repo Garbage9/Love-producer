@@ -1,0 +1,253 @@
+@charset "UTF-8";
+/*导航栏*/
+header {
+    width: 65%;
+    margin: 0 auto;
+    min-width: 880px;
+}
+header .logo:hover {
+    transform: scale(1.03);
+    transition: all .2s linear;
+}
+header .tb_list {
+    display: flex;
+    top: 0;
+    right: 0;
+    width: 60%;
+    margin: 35px auto;
+}
+header .tb_list li {
+    width: 100%;
+    margin: 0 auto;
+}
+header .tb_list li a {
+    display: block;
+    height: 45px;
+}
+header .tb_list li a:first-of-type:hover {
+    background-position: 0 -45px;
+}
+header .tb_list li:first-of-type a{
+    background: url("../images/content/nav-story.png") no-repeat;
+    background-size: 70px auto;
+}
+header .tb_list li:nth-of-type(2) a{
+    background: url("../images/content/nav-swan.png") no-repeat;
+    background-size: 140px;
+}
+header .tb_list li:nth-of-type(3) a{
+    background: url("../images/content/nav-news.png") no-repeat;
+    background-size: 86px auto;
+}
+header .tb_list li:nth-of-type(4) a{
+    background: url("../images/content/nav-special.png") no-repeat;
+    background-size: 94px auto;
+}
+#cover {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 100;
+}
+#cover.hide {
+    display: none;
+}
+#cover .characters_box {
+    width: 1318px;
+    height: 704px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-left: -660px;
+    margin-top: -352px;
+}
+#cover .character {
+    opacity: 0;
+}
+#cover .character:first-of-type {
+    position: absolute;
+    left: 64px;
+    top: 0;
+    width: 980px;
+    animation: moveLeft .01s linear forwards;
+}
+#cover .character:nth-of-type(2) {
+    width: 978px;
+    position: absolute;
+    top: 181px;
+    right: 0;
+    animation: moveRight .1s .15s linear forwards;
+}
+#cover .character:nth-of-type(3) {
+    position: absolute;
+    width: 980px;
+    top: 350px;
+    left: 0;
+    animation: moveLeft .1s .3s linear forwards;
+}
+#cover .character:nth-of-type(4) {
+    position: absolute;
+    width: 978px;
+    height: 182px;
+    bottom: 0;
+    right: 0;
+    animation: moveRight .1s .45s linear forwards;
+}
+@keyframes moveRight {
+    0% {
+        opacity: 0;
+        margin-right: -100%;
+    }
+    50% {
+        opacity: 0;
+        margin-right: -50%;
+    }
+    100% {
+        opacity: 1;
+        margin-right: 0;
+    }
+}
+@keyframes moveLeft {
+    0% {
+        opacity: 0;
+        margin-left: -100%;
+    }
+    50% {
+        opacity: 0;
+        margin-left: -50%;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+#cover .character a {
+    width: 980px;
+    height: 200px;
+}
+#cover .character a:first-of-type:hover {
+    position: absolute;
+    background: url("../images/content/select_checked_left.png") no-repeat;
+}
+#cover .character a:nth-of-type(2):hover {
+    position: absolute;
+    background: url("../images/content/select_checked_right.png") no-repeat;
+}
+#cover .character a:nth-of-type(3):hover {
+    position: absolute;
+    background: url("../images/content/select_checked_right.png") no-repeat;
+}
+#cover .character a:nth-of-type(4):hover {
+    position: absolute;
+    background: url("../images/content/select_checked_right.png") no-repeat;
+}
+#cover .shutBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+#cover .shutBtn:hover {
+    transform: rotateZ(-180deg);
+}
+/*尾部*/
+footer {
+    color: #174174;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 20px;
+}
+footer a {
+    color: #174174;
+}
+/*下载*/
+
+.download_box {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+.download_box .role {
+    position: relative;
+    background: rgba(12,23,43,0.9);
+    width: 60px;
+    height: 24px;
+    border-radius: 30px 30px 0 0;
+    margin: 0 auto;
+}
+.download_box .role span {
+    display: block;
+    background: url("../images/content/pull.png");
+    width: 45px;
+    height: 29px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+/*下载栏隐藏样式*/
+.download_box .hide {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transition: all .35s linear;
+}
+.download_box .hide span {
+    background-position: 0 85px;
+}
+/*下载栏打开样式*/
+.download_box .download {
+    width: 100%;
+    background: rgba(12,23,43,0.9);
+}
+.download_box .download .dl_content {
+    width: 35%;
+    max-width: 500px;
+    min-width:450px;
+    margin: 0 auto;
+    padding: 10px 0;
+    position: relative;
+}
+.download_box .download .dl_content .qrCode {
+    width: 210px;
+}
+.download_box .download .dl_content .dl_phone li a {
+    display: block;
+    height: 60px;
+}
+.download_box .explain {
+    background: url("../images/content/numsmall.png") no-repeat;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    bottom: -10px;
+    right: -200px;
+    display: none;
+}
+.download_box .explain span {
+    display: block;
+    margin: 26px 20px 10px 50px;
+    color: #7b92b1;
+}
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000000;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 11;
+    pointer-events: none;
+}
+.loading img {
+    position: absolute;
+    top: 25%;
+    left: 42%;
+    transform: translateX(-25%);
+}
